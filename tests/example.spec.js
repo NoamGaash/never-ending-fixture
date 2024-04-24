@@ -6,6 +6,7 @@ const myFixture = test.extend({
     console.log('Fixture teardown starts');
     await new Promise((r) => setTimeout(r, 31_000));
     console.log('Fixture teardown ends');
+    throw "will never be thrown";
   }, { auto: true, timeout: 60_000, scope: 'worker'}]
 });
 
